@@ -63,13 +63,6 @@ build CMakeFiles/15_puzzle_game.dir/src/models/game.cpp.o: CXX_COMPILER__15_puzz
   OBJECT_DIR = CMakeFiles/15_puzzle_game.dir
   OBJECT_FILE_DIR = CMakeFiles/15_puzzle_game.dir/src/models
 
-build CMakeFiles/15_puzzle_game.dir/src/models/user.cpp.o: CXX_COMPILER__15_puzzle_game_unscanned_Debug /home/aziz/Documents/Coding/Learning/C++/15$ puzzle$ game/src/models/user.cpp || cmake_object_order_depends_target_15_puzzle_game
-  DEP_FILE = CMakeFiles/15_puzzle_game.dir/src/models/user.cpp.o.d
-  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
-  INCLUDES = -I"/home/aziz/Documents/Coding/Learning/C++/15 puzzle game/include" -I"/home/aziz/Documents/Coding/Learning/C++/15 puzzle game/include/models"
-  OBJECT_DIR = CMakeFiles/15_puzzle_game.dir
-  OBJECT_FILE_DIR = CMakeFiles/15_puzzle_game.dir/src/models
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target 15_puzzle_game
@@ -78,7 +71,7 @@ build CMakeFiles/15_puzzle_game.dir/src/models/user.cpp.o: CXX_COMPILER__15_puzz
 #############################################
 # Link the executable 15_puzzle_game
 
-build 15_puzzle_game: CXX_EXECUTABLE_LINKER__15_puzzle_game_Debug CMakeFiles/15_puzzle_game.dir/src/main.cpp.o CMakeFiles/15_puzzle_game.dir/src/models/game.cpp.o CMakeFiles/15_puzzle_game.dir/src/models/user.cpp.o
+build 15_puzzle_game: CXX_EXECUTABLE_LINKER__15_puzzle_game_Debug CMakeFiles/15_puzzle_game.dir/src/main.cpp.o CMakeFiles/15_puzzle_game.dir/src/models/game.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/15_puzzle_game.dir
   POST_BUILD = :

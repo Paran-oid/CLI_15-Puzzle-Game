@@ -9,12 +9,13 @@
 #include "utils.h"
 class user {
 private:
-    std::string name;
-    Direction direction;
+    std::string m_name;
+    Direction m_direction;
 public:
-    friend std::istream& operator>>(std::istream& in, user& user) {
-        in >> user.name;
-        return in;
+    user(const std::string& name)
+        : m_name{name}
+    {
+
     }
 };
 

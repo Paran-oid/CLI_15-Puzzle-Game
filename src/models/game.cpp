@@ -3,6 +3,27 @@
 //
 
 #include "game.h"
+
+void game::init_game() {
+    std::vector<int> numbers;
+    for(int i = 1; i <= 15; i++) {
+        numbers.push_back(i);
+    }
+
+    std::random_device rd;
+    std::mt19937 mt(rd());
+    std::uniform_int_distribution(1, 15);
+    std::ranges::shuffle(numbers, mt);
+
+    int k = 0;
+    for(int i = 0; i < SIZE; i++) {
+        for(int j = 0; j < SIZE; j++) {
+            if(i == SIZE - 1 && j == SIZE - 1)
+                m_board[i][j] = 0;
+            m_board[i][j] = numbers[k++];
+        }
+    }
+}
 void game::get_board() const {
     for(int i = 0; i < 4; i++)
         std::cout << std::endl;
@@ -23,8 +44,7 @@ void game::get_board() const {
     }
 
 }
-
-void game::move_item(char input) {
+void game::move_item(const char input) {
     ++m_moves;
     switch(input) {
         case 'z':
@@ -55,7 +75,6 @@ void game::move_item(char input) {
             }
     }
 }
-
 void game::check_if_won() {
     int expected_val = 1;
     for(int i = 0; i < SIZE; i++) {
@@ -72,28 +91,4 @@ void game::check_if_won() {
     m_state = true;
 }
 
-void game::reset() {
-    init_game();
-}
-
-void game::init_game() {
-    std::vector<int> numbers;
-    for(int i = 1; i <= 15; i++) {
-        numbers.push_back(i);
-    }
-
-    std::random_device rd;
-    std::mt19937 mt(rd());
-    std::uniform_int_distribution<>(1, 15);
-    std::shuffle(numbers.begin(), numbers.end(), mt);
-
-    int k = 0;
-    for(int i = 0; i < SIZE; i++) {
-        for(int j = 0; j < SIZE; j++) {
-            if(i == SIZE - 1 && j == SIZE - 1)
-                m_board[i][j] = 0;
-            m_board[i][j] = numbers[k++];
-        }
-    }
-}
 
